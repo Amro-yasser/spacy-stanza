@@ -100,12 +100,7 @@ class StanzaTokenizer(object):
             words = token_texts
             spaces = [True] * len(words)
             is_aligned = False
-            warnings.warn(
-                "Due to multiword token expansion or an alignment "
-                "issue, the original text has been replaced by space-separated "
-                "expanded tokens.",
-                stacklevel=4,
-            )
+            
         offset = 0
         for i, word in enumerate(words):
             if word.isspace() and (
